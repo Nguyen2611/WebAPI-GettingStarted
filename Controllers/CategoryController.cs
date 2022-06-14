@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,7 @@ namespace WebAPI_FirstPrj.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult createCategory(Data.Category category)
         {
             try
